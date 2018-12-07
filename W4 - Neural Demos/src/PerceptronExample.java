@@ -1,0 +1,77 @@
+import au.edu.ecu.is.neural.*;
+
+import java.util.*;
+
+/**
+ * Demo program showing a simple perceptron solving simple binary problems.
+ * 
+ * @author phi 
+ * @version 2003/2
+ */
+public class PerceptronExample
+{
+	private static final double LEARNING_RATE = 0.01;
+    private static final double MIN_ERROR_PER_OUTPUT = 0.05;
+    private static final int MAX_EPOCHS = 100;
+    
+    private static final double NOISE = 0.15;
+    
+    private static final int PROBLEM_NUMBER = 2;  // determines which problem to use
+    
+    private static final String[] problems = // names of files containing the problems
+        {
+            "D:\\PhD\\IS - AI - ACBT\\EclipseJavaProjects\\W4 - Neural Demos\\src\\and.problem",      // two inputs, one output, which is the result of applying the named logical operation
+            "D:\\PhD\\IS - AI - ACBT\\EclipseJavaProjects\\W4 - Neural Demos\\src\\or.problem",
+            "D:\\PhD\\IS - AI - ACBT\\EclipseJavaProjects\\W4 - Neural Demos\\src\\xor.problem"       // this one is not separable, so a perceptron can't solve it
+        };
+	    
+    public static void main(String[] args) throws Exception
+    {
+        PerceptronExample perceptronExample = new PerceptronExample();
+        
+        perceptronExample.go();
+    }
+    
+    public void go() throws Exception
+    {
+        Random random = new Random();
+        
+        // read the problem to solve from file
+        ClassificationProblem problem = ClassificationProblem.readClassificationProblem(problems[PROBLEM_NUMBER]);
+        int nInputs = problem.getNInputs();
+
+        // create noisy versions for training and testing
+        ClassificationProblem trainingProblem = ClassificationProblem.addGaussian(problem, random, 1, NOISE);
+        ClassificationProblem testProblem = ClassificationProblem.addGaussian(problem, random, 3, NOISE);
+
+        // construct a perceptron to try to solve it
+        Perceptron perceptron = new Perceptron(nInputs, random, LEARNING_RATE);
+        
+        // set this as the problem to solve
+        perceptron.setTrainingProblem(trainingProblem);
+        perceptron.setTestProblem(testProblem);
+        perceptron.setMinError(MIN_ERROR_PER_OUTPUT*problem.getNOutputs());
+        perceptron.setMaxEpochs(MAX_EPOCHS);
+        
+        perceptron.showClassification();    // a display showing decision regions
+        
+        perceptron.showLearning();         // a display that shows the error during learning, and has controls to start/stop learning
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

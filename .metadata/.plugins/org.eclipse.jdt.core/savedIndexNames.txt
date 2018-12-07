@@ -1,0 +1,11 @@
+INDEX VERSION 1.126+D:\PhD\IS - AI - ACBT\EclipseJavaProjects\.metadata\.plugins\org.eclipse.jdt.core
+421180773.index
+286034275.index
+782828834.index
+2727480700.index
+2657658890.index
+2733176890.index
+3419213564.index
+1253564621.index
+4293969301.index
+2216774660.index
