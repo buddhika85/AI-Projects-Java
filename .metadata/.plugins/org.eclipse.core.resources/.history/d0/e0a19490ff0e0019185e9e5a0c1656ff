@@ -1,0 +1,32 @@
+import au.edu.ecu.is.fuzzy.FuzzyRuleSet;
+import au.edu.ecu.is.fuzzy.FuzzyVariable;
+
+
+public class MyCruiseController implements CruiseController {
+
+	public FuzzyRuleSet getRuleSet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public FuzzyVariable getSpeedError() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public FuzzyVariable getAcceleration() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public FuzzyVariable getForceChange() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public double computeForceChange(double speedError, double acceleration) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

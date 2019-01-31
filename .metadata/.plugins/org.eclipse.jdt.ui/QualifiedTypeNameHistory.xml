@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="MyPendulumControllerCompleted"/>
+<fullyQualifiedTypeName name="battle.saucers.controllers.BerzerkController"/>
+<fullyQualifiedTypeName name="battle.saucers.controllers.DodgerController"/>
+<fullyQualifiedTypeName name="au.edu.ecu.is.fuzzy.FuzzyException"/>
+<fullyQualifiedTypeName name="au.edu.ecu.is.fuzzy.SugenoRuleSet"/>
+<fullyQualifiedTypeName name="au.edu.ecu.is.fuzzy.FuzzySet"/>
 </qualifiedTypeNameHistroy>

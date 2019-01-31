@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Assignment - Part A&apos;&#x0D;&#x0A;- Original project: &apos;Assignment - Part A&apos;&#x0D;&#x0A;- Original element: &apos;Assignment - Part A/src/PartAOpponents.battle.saucers.controllers&apos;" description="Delete element" element1="/src&lt;PartAOpponents.battle.saucers.controllers" element2="/src&lt;PartAOpponents.battle.saucers" element3="/src&lt;PartAOpponents.battle" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1545157519197" subPackages="false" version="1.0"/>
+</session>
